@@ -23,10 +23,27 @@ const TicketSection: React.FC = () => {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="font-display text-5xl md:text-7xl text-white mb-4">TICKETS</h2>
           <p className="text-gray-400">망설이는 순간 매진! 지금 바로 신청하세요.</p>
+        </motion.div>
+
+        {/* Notice Block */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto mb-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-2xl p-6 text-center backdrop-blur-sm relative overflow-hidden"
+        >
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-orange-500"></div>
+          <h3 className="text-red-400 font-bold text-xl mb-3 animate-pulse">
+            🔥 예매 필수! 🔥
+          </h3>
+          <p className="text-gray-200 leading-relaxed">
+            원활한 진행을 위해 <span className="font-bold text-white border-b border-red-400/50">금요일(3월 13일 자정)까지</span><br className="md:hidden" /> 예매 신청받습니다.<br/>
+            <span className="text-sm mt-2 block text-gray-300">나머지 분들은 현매로 진행 부탁드립니다 🙏</span>
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

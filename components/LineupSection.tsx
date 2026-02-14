@@ -19,9 +19,24 @@ const LineupSection: React.FC = () => {
   };
 
   const performers = [
-    { name: "HEMAS", role: "Performance", gradient: "from-pink-500 via-rose-500 to-yellow-500" },
-    { name: "FEEL DANCE", role: "Performance", gradient: "from-violet-500 via-purple-500 to-fuchsia-500" },
-    { name: "DENIS & ELLADA", role: "Bootcamp Team", gradient: "from-cyan-500 via-blue-500 to-indigo-500" },
+    { 
+      name: "HEMAS", 
+      krName: "헤마스",
+      desc: "부산.울산 살사 퍼포먼스 팀 시즌6 초연", 
+      gradient: "from-pink-500 via-rose-500 to-yellow-500" 
+    },
+    { 
+      name: "FEEL DANCE", 
+      krName: "필댄스팀",
+      desc: "삘생삘사 바차타 공연", 
+      gradient: "from-violet-500 via-purple-500 to-fuchsia-500" 
+    },
+    { 
+      name: "DENIS & ELLADA", 
+      krName: "데니스 & 엘라다",
+      desc: "해외 바차타 댄서 부트캠프팀 공연", 
+      gradient: "from-cyan-500 via-blue-500 to-indigo-500" 
+    },
   ];
 
   return (
@@ -87,7 +102,7 @@ const LineupSection: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Performers - Text Only Version */}
+        {/* Performers - Updated Version */}
         <h3 className="text-center text-3xl font-bold mb-12 flex items-center justify-center gap-3">
           <Users className="text-purple-400" /> PERFORMANCES
         </h3>
@@ -117,13 +132,15 @@ const LineupSection: React.FC = () => {
                     <Sparkles className="text-white/40" size={24} />
                 </div>
 
-                <span className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-4 border-b border-gray-800 pb-2 group-hover:border-white/20 group-hover:text-gray-300 transition-all">
-                    {p.role}
+                <span className="text-xs md:text-sm font-bold text-gray-400 mb-4 block break-keep leading-relaxed">
+                   💙 {p.desc}
                 </span>
                 
-                <h4 className={`text-4xl md:text-5xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r ${p.gradient} drop-shadow-sm`}>
+                <h4 className={`text-3xl md:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r ${p.gradient} drop-shadow-sm mb-1`}>
                     {p.name}
                 </h4>
+
+                <p className="text-white/50 text-sm">{p.krName}</p>
                 
                 <div className={`mt-6 w-12 h-1 rounded-full bg-gradient-to-r ${p.gradient} opacity-50 group-hover:w-full transition-all duration-500`}></div>
               </div>
