@@ -5,6 +5,7 @@ import LineupSection from './components/LineupSection';
 import TicketSection from './components/TicketSection';
 import ContactSection from './components/ContactSection';
 import FloatingParticles from './components/FloatingParticles';
+import BackgroundMusic from './components/BackgroundMusic';
 import { Music, ArrowUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -31,6 +32,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white relative overflow-hidden selection:bg-pink-500 selection:text-white">
       <FloatingParticles />
+      <BackgroundMusic videoId="Df9GrBwgyjQ" />
       
       {/* Sticky Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass py-3 shadow-lg' : 'bg-transparent py-5'}`}>
